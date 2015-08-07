@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BaseSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXC-u4-jUg">
+                                <rect key="frame" x="230" y="108" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCf-Oq-aK0" userLabel="message">
+                                <rect key="frame" x="16" y="289" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHr-fF-5VF">
+                                <rect key="frame" x="270" y="460" width="60" height="30"/>
+                                <state key="normal" title="Show #3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AgS-pX-PWL" kind="custom" identifier="idSecondSegue" customClass="SecondCustomSegue" customModule="BaseSegues" customModuleProvider="target" id="AAa-Wq-jaP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fCf-Oq-aK0" secondAttribute="centerX" id="5A5-kB-RmC"/>
+                            <constraint firstItem="mXC-u4-jUg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="88" id="5I7-1m-rFK"/>
+                            <constraint firstAttribute="centerX" secondItem="mXC-u4-jUg" secondAttribute="centerX" id="ADb-lP-05A"/>
+                            <constraint firstAttribute="centerY" secondItem="fCf-Oq-aK0" secondAttribute="centerY" id="QVk-dr-geQ"/>
+                            <constraint firstItem="LHr-fF-5VF" firstAttribute="top" secondItem="fCf-Oq-aK0" secondAttribute="bottom" constant="150" id="Wio-ce-V5k"/>
+                            <constraint firstAttribute="centerX" secondItem="LHr-fF-5VF" secondAttribute="centerX" id="t4c-VR-Tn5"/>
+                            <constraint firstItem="fCf-Oq-aK0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="wcJ-wW-d8P"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dpz-PV-Xoe" appends="YES" id="Sp9-gE-gUV"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="CXY-g9-JJO"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="fCf-Oq-aK0" id="ZtA-Km-Wgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="Dpz-PV-Xoe" userLabel="show 2">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="w5I-uM-Jh7"/>
+                        <segue destination="SVw-FL-2DM" kind="custom" identifier="idFirstSegue" customClass="FirstCustomSegue" customModule="BaseSegues" customModuleProvider="target" id="HRT-eM-d0K"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1777" y="505"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="X3v-P1-nR0">
+            <objects>
+                <viewController id="AgS-pX-PWL" userLabel="Third" customClass="ThirdViewController" customModule="BaseSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H8I-bY-3zY"/>
+                        <viewControllerLayoutGuide type="bottom" id="xme-Oq-MfN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Vd-RZ-kad">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller #3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOn-li-4k5" userLabel="View Controller #3">
+                                <rect key="frame" x="230" y="108" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jOn-li-4k5" secondAttribute="centerX" id="Ayk-0d-oH2"/>
+                            <constraint firstItem="jOn-li-4k5" firstAttribute="top" secondItem="H8I-bY-3zY" secondAttribute="bottom" constant="88" id="vSL-Tl-kKN"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tz1-Ha-WSs" appends="YES" id="gTL-Cn-YNk"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ij3-1e-HoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6vD-c2-BuF" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="tz1-Ha-WSs">
+                    <connections>
+                        <segue destination="6vD-c2-BuF" kind="unwind" identifier="idSecondSegueUnwind" unwindAction="returnFormSegueActions:" id="BAP-vi-IcR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1679" y="-186"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="7LD-Jf-BWI">
+            <objects>
+                <viewController id="SVw-FL-2DM" userLabel="Second" customClass="SecondViewController" customModule="BaseSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e2v-aq-cuy"/>
+                        <viewControllerLayoutGuide type="bottom" id="53B-2W-waX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wYw-5D-WQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller #2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-gz-feA">
+                                <rect key="frame" x="230" y="108" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdG-ni-K61" userLabel="message">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UdG-ni-K61" secondAttribute="trailing" constant="20" id="6Qn-lf-KQ1"/>
+                            <constraint firstAttribute="centerX" secondItem="ALI-gz-feA" secondAttribute="centerX" id="Nam-df-bR0"/>
+                            <constraint firstAttribute="centerY" secondItem="UdG-ni-K61" secondAttribute="centerY" id="V9j-C1-Sap"/>
+                            <constraint firstItem="UdG-ni-K61" firstAttribute="leading" secondItem="wYw-5D-WQ2" secondAttribute="leading" constant="20" id="Vf0-mn-NTE"/>
+                            <constraint firstItem="ALI-gz-feA" firstAttribute="top" secondItem="e2v-aq-cuy" secondAttribute="bottom" constant="88" id="XPd-EJ-Otx"/>
+                            <constraint firstAttribute="centerX" secondItem="UdG-ni-K61" secondAttribute="centerX" id="tZO-9H-Bde"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UBO-sG-HKD" appends="YES" id="bCr-0e-wAt"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="UdG-ni-K61" id="6Kc-RU-11Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="toa-6O-UxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RaJ-TS-zSH" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="UBO-sG-HKD">
+                    <connections>
+                        <outlet property="delegate" destination="SVw-FL-2DM" id="ulu-4F-uFx"/>
+                        <segue destination="RaJ-TS-zSH" kind="unwind" identifier="idFirstSegueUnwind" unwindAction="returnFormSegueActions:" id="IVo-AC-X0x"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2491" y="505"/>
+        </scene>
+    </scenes>
+</document>
