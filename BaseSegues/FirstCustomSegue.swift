@@ -29,9 +29,14 @@ class FirstCustomSegue: UIStoryboardSegue {
             SecondVCView.frame = CGRectOffset(SecondVCView.frame, 0, screenHeight)
             
         }) { (Finished) -> Void in
-//            self.sourceViewController.navigationController?!.pushViewController(self.destinationViewController as! UIViewController, animated: false)
-
+    
+//            if let navController = self.sourceViewController.navigationController {
+//                navController!.pushViewController(self.destinationViewController as! UIViewController , animated: false)
+//            }
+            
+            
             self.sourceViewController.presentViewController(self.destinationViewController as! UIViewController, animated: false, completion: nil)
+            
         }
     }
    

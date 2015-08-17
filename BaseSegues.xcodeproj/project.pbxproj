@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0954FE21B74B81B00ED9499 /* CINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0954FE11B74B81B00ED9499 /* CINavigationController.swift */; };
 		D0B4CFDA1B735443000508CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4CFD91B735443000508CB /* AppDelegate.swift */; };
 		D0B4CFDC1B735443000508CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4CFDB1B735443000508CB /* ViewController.swift */; };
 		D0B4CFDF1B735443000508CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B4CFDD1B735443000508CB /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0954FE11B74B81B00ED9499 /* CINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CINavigationController.swift; sourceTree = "<group>"; };
 		D0B4CFD41B735443000508CB /* BaseSegues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseSegues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B4CFD81B735443000508CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B4CFD91B735443000508CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				D0B4CFE01B735443000508CB /* Images.xcassets */,
 				D0B4CFE21B735443000508CB /* LaunchScreen.xib */,
 				D0B4CFD71B735443000508CB /* Supporting Files */,
+				D0954FE11B74B81B00ED9499 /* CINavigationController.swift */,
 			);
 			path = BaseSegues;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				D0B4CFDC1B735443000508CB /* ViewController.swift in Sources */,
 				D0B4D0001B735954000508CB /* FirstCustomSegueUnwind.swift in Sources */,
 				D0B4CFFC1B7357FD000508CB /* ThirdViewController.swift in Sources */,
+				D0954FE21B74B81B00ED9499 /* CINavigationController.swift in Sources */,
 				D0B4CFDA1B735443000508CB /* AppDelegate.swift in Sources */,
 				D0B4D0041B735967000508CB /* SecondCustomSegueUnwind.swift in Sources */,
 				D0B4CFFE1B735945000508CB /* FirstCustomSegue.swift in Sources */,
@@ -433,6 +437,7 @@
 				D0B4CFF51B735443000508CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0B4CFF61B735443000508CB /* Build configuration list for PBXNativeTarget "BaseSeguesTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +446,7 @@
 				D0B4CFF81B735443000508CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

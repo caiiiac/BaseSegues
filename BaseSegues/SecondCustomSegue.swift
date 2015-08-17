@@ -31,7 +31,15 @@ class SecondCustomSegue: UIStoryboardSegue {
                 
             }, completion: { (Finished) -> Void in
                 firstVCView.transform = CGAffineTransformIdentity
+                
+//                if let navController = self.sourceViewController.navigationController {
+//                navController!.pushViewController(self.destinationViewController as! UIViewController , animated: false)
+//                    
+//                }
+                
                 self.sourceViewController.presentViewController(self.destinationViewController as! UIViewController, animated: false, completion: nil)
+                
+
             })
             
             
